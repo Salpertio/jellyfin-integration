@@ -71,11 +71,11 @@ To prevent the API key from being exposed client-side, the plugin uses AJAX to f
 
 
 issues...
-right now only certain album covers will show up (clueless as to why) something to do with the ones that work are cached already (i cleared the cache, weirdge) 🧠
 
-tried to add an auto-get user id to settings. (refused to get user, doesnt exist) :ok buddy:🃏
+s̶o̶m̶e̶ ̶a̶l̶b̶u̶m̶ ̶c̶o̶v̶e̶r̶s̶ ̶a̶r̶e̶ ̶m̶i̶s̶s̶i̶n̶g̶  fixed in 1.5 
 
-p.s HELLO INTERNET 
+
+HELLO INTERNET 
 
 its on GPL v3 so feel free to add or migrate idrc. 
 
