@@ -1,7 +1,6 @@
 # jellyfin-integration
 Jellyfin Integration Plugin
 
-Description
 
 The Jellyfin Integration Plugin for WordPress allows you to display the currently playing media of a specific Jellyfin user on your WordPress site using a simple shortcode. This plugin is built using PHP, CSS, and JavaScript and is designed to be easy to install and configure.
 Foreword
