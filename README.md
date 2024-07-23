@@ -5,7 +5,7 @@ Jellyfin Integration Plugin
 The Jellyfin Integration Plugin for WordPress allows you to display the currently playing media of a specific Jellyfin user on your WordPress site using a simple shortcode. This plugin is built using PHP, CSS, and JavaScript and is designed to be easy to install and configure.
 Foreword
 
-This plugin was created with the assistance of GPT (Generative Pre-trained Transformer). The efforts and wisdom of our LLM (Language Model) overlords have been instrumental in its development.
+This plugin was created with the assistance of GPT. The efforts of our LLM overlords have been instrumental in its development.
 
 Features
 
@@ -14,7 +14,36 @@ Features
     Support for mixed content to handle different protocol settings.
     Customizable settings for API key, server URL, and user ID.
 
-Installation
+
+Optional Features
+YouTube Search Link
+
+You can enable a YouTube search link for the currently playing media. This link will search for the song and artist on YouTube. To enable this feature:
+
+    Go to Settings > Jellyfin.
+    Check the box for Enable YouTube Link.
+
+Mixed Content
+
+If you are accessing your Jellyfin server over HTTP and your WordPress site over HTTPS, you might encounter issues due to mixed content. You can allow mixed content by enabling this feature:
+
+    Go to Settings > Jellyfin.
+    Check the box for Allow Mixed Content.
+
+Security
+
+Securing the API Key
+
+To prevent the API key from being exposed client-side, the plugin uses AJAX to fetch data securely from the server. Here's why using AJAX is more secure:
+
+    Server-Side Requests: AJAX allows the server to handle requests that require sensitive information, such as the API key. This prevents the API key from being exposed in the client's browser.
+
+    Minimized Exposure: By using AJAX, the API key is only used on the server side and is never included in the HTML or JavaScript that is sent to the client's browser.
+
+
+
+
+    Installation
 
     Download the Plugin:
         Download the plugin files and zip them into a folder named jellyfin-integration.zip.
@@ -43,30 +72,6 @@ curl -X GET "http://your-jellyfin-server-address:8096/Users" -H "X-Emby-Token: y
 
 Replace your-jellyfin-server-address with the address of your Jellyfin server and your_api_key with your actual API key. The command will return a list of users with their IDs. Find the ID corresponding to your username.
 
-Optional Features
-YouTube Search Link
-
-You can enable a YouTube search link for the currently playing media. This link will search for the song and artist on YouTube. To enable this feature:
-
-    Go to Settings > Jellyfin.
-    Check the box for Enable YouTube Link.
-
-Mixed Content
-
-If you are accessing your Jellyfin server over HTTP and your WordPress site over HTTPS, you might encounter issues due to mixed content. You can allow mixed content by enabling this feature:
-
-    Go to Settings > Jellyfin.
-    Check the box for Allow Mixed Content.
-
-Security
-
-Securing the API Key
-
-To prevent the API key from being exposed client-side, the plugin uses AJAX to fetch data securely from the server. Here's why using AJAX is more secure:
-
-    Server-Side Requests: AJAX allows the server to handle requests that require sensitive information, such as the API key. This prevents the API key from being exposed in the client's browser.
-
-    Minimized Exposure: By using AJAX, the API key is only used on the server side and is never included in the HTML or JavaScript that is sent to the client's browser.
 
 
 issues...
