@@ -4,7 +4,7 @@ Plugin Name: Jellyfin Integration
 Plugin URI: https://github.com/Salpertio
 Description: Retrieves and displays currently playing media from Jellyfin.
 Version: 2.0
-Author: salpertia
+Author: Salpertio
 Author URI: https://github.com/Salpertio
 */
 
@@ -12,7 +12,7 @@ defined('ABSPATH') or die('Direct script access disallowed.');
 
 // Enqueue scripts and localize the AJAX URL
 function jellyfin_enqueue_scripts() {
-    wp_enqueue_script('jellyfin-live-updates', plugin_dir_url(__FILE__) . 'js/jellyfin-updates.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('jellyfin-live-updates', plugin_dir_url(__FILE__) . 'jellyfin-updates.js', array('jquery'), '1.0.0', true);
     wp_localize_script('jellyfin-live-updates', 'ajaxurl', array('ajax_url' => admin_url('admin-ajax.php')));
 }
 add_action('wp_enqueue_scripts', 'jellyfin_enqueue_scripts');
@@ -205,7 +205,7 @@ function serve_jellyfin_image() {
 
 // Include your CSS styling
 function jellyfin_enqueue_styles() {
-    wp_enqueue_style('jellyfin-styles', plugin_dir_url(__FILE__) . 'css/jellyfin-styles.css');
+    wp_enqueue_style('jellyfin-styles', plugin_dir_url(__FILE__) . 'jellyfin-styles.css');
 }
 add_action('wp_enqueue_scripts', 'jellyfin_enqueue_styles');
 

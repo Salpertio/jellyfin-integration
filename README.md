@@ -49,20 +49,29 @@ Enter your Jellyfin server URL, API key, and user ID.
 </details> <details> <summary>Usage</summary>
 Use the following shortcode to display the now playing information:
 
-plaintext
-Copy code
+```
 [jellyfin_now_playing]
+```
 Getting Your User ID
 To retrieve your Jellyfin User ID, authenticate with your API key using this command:
 
-bash
-Copy code
+```bash
 curl -X GET "http://your-jellyfin-server-address:8096/Users" -H "X-Emby-Token: your_api_key"
+```
 Replace your-jellyfin-server-address with your Jellyfin server’s address and your_api_key with your actual API key. Find the ID corresponding to your username in the returned list.
 
 </details> <details> <summary>Known Issues</summary>
 Some album covers were missing (fixed in 1.5).
 </details>
+
+## Running Tests
+
+This plugin includes a basic PHPUnit test. To run it, execute:
+
+```bash
+phpunit
+```
+
 License: This plugin is released under GPL v3, so feel free to modify or extend it.
 
 We hope you find this plugin useful! We look forward to your feedback and suggestions for future improvements. (P.S. Not planning to go full-time with this one!)
